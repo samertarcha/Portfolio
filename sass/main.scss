@@ -1,0 +1,21 @@
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+
+@import 'base/animations';
+@import 'base/base';
+@import 'base/typography';
+@import 'base/utilities';
+
+@import 'components/buttons';
+@import 'components/toggle';
+
+@import 'layout/about';
+@import 'layout/contact';
+@import 'layout/footer';
+@import 'layout/header';
+@import 'layout/projects';
+@import 'layout/nav';
+@import 'layout/skills';
+
+@import 'pages/home';

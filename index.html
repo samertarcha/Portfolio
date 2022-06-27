@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="30000">
+    <meta charset="UTF-8">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/fd3e1612ff.js" crossorigin="anonymous"></script>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+    <script src="https://smtpjs.com/v3/smtp.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="text/javascript" src="app.js" defer></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="sass/main.css">
+
+    <link rel="icon" href="img/icon.png">
+
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="toggle" data-aos="fade-down" data-aos-duration="600">
+            <div class="toggle__hamburger"></div>
+        </div>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li>
+                    <a href="#home" class="nav__item">
+                        <svg class="nav__icon">
+                            <use xlink:href="img/sprite.svg#icon-home"></use>
+                        </svg>
+                        <p class="nav__title">Home</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#about" class="nav__item">
+                        <svg class="nav__icon">
+                            <use xlink:href="img/sprite.svg#icon-info-with-circle"></use>
+                        </svg>
+                        <p class="nav__title">About</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#skills" class="nav__item">
+                        <svg class="nav__icon">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                        </svg>
+                        <p class="nav__title">Skills</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#projects" class="nav__item">
+                        <svg class="nav__icon">
+                            <use xlink:href="img/sprite.svg#icon-folder"></use>
+                        </svg>
+                        <p class="nav__title">Projects</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact" class="nav__item">
+                        <svg class="nav__icon">
+                            <use xlink:href="img/sprite.svg#icon-mail"></use>
+                        </svg>
+                        <p class="nav__title">Contact</p>
+                    </a>
+                </li>
+            </ul>
+            <!-- <button class="theme">
+                Select Theme
+            </button> -->
+        </nav>
+        <header class="header" id="home">
+            <div class="header__content">
+                <div class="header__occupation" data-aos="fade-left" data-aos-duration="600" data-aos-delay="400">
+                    Web Developer
+                </div>
+                <div class="header__name" data-aos="fade-right" data-aos-duration="600" data-aos-delay="200">
+                    Samer Tarcha
+                </div>
+                <div class="header__location" data-aos="fade-left" data-aos-duration="600" data-aos-delay="600">
+                    Beirut, Lebanon
+                </div>
+            </div>
+        </header>
+        <section class="about" id="about">
+            <h2 class="heading-secondary" data-aos="zoom-in-down">About me</h2>
+            <div class="about__container" data-aos="fade-left">
+                <div class="about__card">
+                    <div class="about__icon">
+                        <svg class="about__icon-svg">
+                            <use xlink:href="img/sprite.svg#icon-profile"></use>
+                        </svg>
+                    </div>
+                    <div class="about__text">
+                        <p>
+                            I am a web developer with a passion for creating beautiful and functional websites. I have a strong
+                            background in web development and a strong understanding of a wide range of the latest web technologies.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="skills" id="skills">
+            <h2 class="heading-secondary" data-aos="zoom-in-down">My top skills</h2>
+            <div class="skills__list">
+                <div class="skills__card" data-aos="fade-left">
+                    <div class="skills__card--side skills__card--front">
+                        <div class="skills__card--img skills__card--img--html"></div>
+                    </div>
+                    <div class="skills__card--side skills__card--back skills__card--back--html">
+                        <ul>
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>semantic elements</p>
+                            </li>
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>event handlers attributes</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="skills__card" data-aos="fade-left">
+                    <div class="skills__card--side skills__card--front">
+                        <div class="skills__card--img skills__card--img--css"></div>
+                    </div>
+                    <div class="skills__card--side skills__card--back skills__card--back--css">
+                        <ul>
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>responsive design</p>
+                            </li>
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>advanced animations</p>
+                            </li>
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>flexbox</p>
+                            </li>
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>Grid layout</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="skills__card" data-aos="fade-left">
+                    <div class="skills__card--side skills__card--front">
+                        <div class="skills__card--img skills__card--img--sass"></div>
+                    </div>
+                    <div class="skills__card--side skills__card--back skills__card--back--sass">
+                        <ul>
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>7 in 1 architecture</p>
+                            </li>
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>mixins</p>
+                            </li>
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>nesting</p>
+                            </li>
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>variables</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="skills__card" data-aos="fade-left">
+                    <div class="skills__card--side skills__card--front">
+                        <div class="skills__card--img skills__card--img--bootstrap"></div>
+                    </div>
+                    <div class="skills__card--side skills__card--back skills__card--back--bootstrap">
+                        <ul>
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>Component Styling</p>
+                            </li>
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>Utilities</p>
+                            </li>
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>Custom Properties</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="skills__card" data-aos="fade-left">
+                    <div class="skills__card--side skills__card--front">
+                        <div class="skills__card--img skills__card--img--js"></div>
+                    </div>
+                    <div class="skills__card--side skills__card--back skills__card--back--js">
+                        <ul>
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>ES6</p>
+                            </li>
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>Event listeners</p>
+                            </li>
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>DOM manipulation</p>
+                            </li>
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>API</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="skills__card" data-aos="fade-left">
+                    <div class="skills__card--side skills__card--front">
+                        <div class="skills__card--img skills__card--img--react"></div>
+                    </div>
+                    <div class="skills__card--side skills__card--back skills__card--back--react">
+                        <ul>
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>JSX</p>
+                            </li>
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>Custom Reusable Components</p>
+                            </li>
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>Hooks</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="skills__card" data-aos="fade-left">
+                    <div class="skills__card--side skills__card--front">
+                        <div class="skills__card--img skills__card--img--php"></div>
+                    </div>
+                    <div class="skills__card--side skills__card--back skills__card--back--php">
+                        <ul>
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>Security</p>
+                            </li>
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>Fast connection with database</p>
+                            </li>
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>Session management</p>
+                            </li>
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>administrative privileges</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="skills__card" data-aos="fade-left">
+                    <div class="skills__card--side skills__card--front">
+                        <div class="skills__card--img skills__card--img--sql"></div>
+                    </div>
+                    <div class="skills__card--side skills__card--back skills__card--back--sql">
+                        <ul>
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>Database design</p>
+                            </li>
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>Join data across tables</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="skills__card" data-aos="fade-left">
+                    <div class="skills__card--side skills__card--front">
+                        <div class="skills__card--img skills__card--img--vitest"></div>
+                    </div>
+                    <div class="skills__card--side skills__card--back skills__card--back--vitest">
+                        <ul>
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>AAA Pattern</p>
+                            </li>
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>Unit tests</p>
+                            </li>
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>Integration tests</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="projects" id="projects">
+            <h2 class="heading-secondary" data-aos="zoom-in-down">My projects</h2>
+            <div class="projects__list">
+                <div class="projects__item" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="projects__img projects__img--court-reservation"></div>
+                    <div class="projects__content">
+                        <h3 class="heading-tertiary">Court Reservation</h3>
+                        <ul class="projects__description">
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>Utilized a third party API to display dynamic data</p>
+                            </li>
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>Responsive, accessible, and dynamic web pages</p>
+                            </li>
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>Different user types with different administrative privileges</p>
+                            </li>
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>Ability to create, update and delete reservations</p>
+                            </li>
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>Dynamic court status, and next available slot</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://courtreservation.samertarcha.com" class="btn" target="_blank">Visit project</a>
+                </div>
+                <div class="projects__item" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="projects__img projects__img--food-order"></div>
+                    <div class="projects__content">
+                        <h3 class="heading-tertiary">React Meals</h3>
+                        <ul class="projects__description">
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>Custom Cart Modal Popup</p>
+                            </li>
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>Displayed list of available options</p>
+                            </li>
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>Ability to add remove items from cart</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://foodorder.samertarcha.com" class="btn" target="_blank">Visit project</a>
+                </div>
+                <div class="projects__item" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="projects__img projects__img--expense-tracker"></div>
+                    <div class="projects__content">
+                        <h3 class="heading-tertiary">Expenses Tracker</h3>
+                        <ul class="projects__description">
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>Built reusable react components</p>
+                            </li>
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>Filter through expenses by year</p>
+                            </li>
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>Create new expenses</p>
+                            </li>
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>Displayed spending of each month for each year using a bar chart</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://expensetracker.samertarcha.com" class="btn" target="_blank">Visit project</a>
+                </div>
+                <div class="projects__item" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="projects__img projects__img--natours"></div>
+                    <div class="projects__content">
+                        <h3 class="heading-tertiary">Natours</h3>
+                        <ul class="projects__description">
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>Utilization of the SASS 7 in 1 architecture</p>
+                            </li>
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>Created Advanced hover effects</p>
+                            </li>
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>Built reusable design components</p>
+                            </li>
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>Modern card design</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://natours.samertarcha.com" class="btn" target="_blank">Visit project</a>
+                </div>
+                <div class="projects__item" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="projects__img projects__img--trillo"></div>
+                    <div class="projects__content">
+                        <h3 class="heading-tertiary">Trillo</h3>
+                        <ul class="projects__description">
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>Custom Flexbox layout</p>
+                            </li>
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>Reactive search bar</p>
+                            </li>
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>Use of SVG sprite to display icons</p>
+                            </li>
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>Advanced animations</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://trillo.samertarcha.com" class="btn" target="_blank">Visit project</a>
+                </div>
+                <div class="projects__item" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="projects__img projects__img--nexter"></div>
+                    <div class="projects__content">
+                        <h3 class="heading-tertiary">Nexter</h3>
+                        <ul class="projects__description">
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>Custom Grid layout</p>
+                            </li>
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>Auto fit grid template for  responsive design</p>
+                            </li>
+                            <li>
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
+                                </svg>
+                                <p>Custom Image gallery</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://nexter.samertarcha.com" class="btn" target="_blank">Visit project</a>
+                </div>
+            </div>
+        </section>
+        <section class="contact" id="contact">
+            <h2 class="heading-secondary" data-aos="zoom-in-down">Contact</h2>
+            <div class="contact__card" data-aos="fade-up">
+                <form class="contact__form" onsubmit="sendEmail();">
+                    <div class="contact__form-item">
+                        <input type="text" class="contact__input" id="contact-name" name="name" placeholder="Name" required>
+                        <label for="name" class="contact__label">Name</label>
+                    </div>
+                    <div class="contact__form-item">
+                        <input type="email" class="contact__input" id="contact-email" name="email" placeholder="Email" required>
+                        <label for="email" class="contact__label">Email</label>
+                    </div>
+                    <div class="contact__form-item">
+                        <textarea id="contact-message" class="contact__input" name="message" placeholder="Your message" required></textarea>
+                        <label for="message" class="contact__message-label">Message</label>
+                    </div>
+                    <div class="contact__form-item">
+                        <input type="submit" class="btn" value="Send message"></input>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footer__content">
+                <ul class="footer__social">
+                    <li>
+                        <a href="mailto:info@samertarcha.com" target="_blank">
+                            <svg>
+                                <use xlink:href="img/sprite.svg#icon-mail"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/samer-tarcha-691991212/" target="_blank">
+                            <svg>
+                                <use xlink:href="img/sprite.svg#icon-linkedin"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/samertarcha" target="_blank">
+                            <svg>
+                                <use xlink:href="img/sprite.svg#icon-github"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <div class="footer__copyright">
+                    <p>&copy; 2022 Samer Tarcha</p>
+                    <p>&copyAll rights reserved</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

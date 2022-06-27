@@ -1,0 +1,77 @@
+.nav {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 10000;
+	padding-block: 2rem;
+	text-align: center;
+	cursor: pointer;
+	font-family: "Montserrat", sans-serif;
+	font-weight: bold;
+	background-color: var(--color-secondary);
+	display: none;
+
+	&.active {
+		@include flexCenter();
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__item {
+		@include flexCenter();
+		justify-content: flex-start;
+		text-decoration: none;
+		color: var(--color-primary);
+		font-size: 1.5rem;
+		text-transform: uppercase;
+		text-align: center;
+		padding: 2rem;
+		position: relative;
+
+		&::before {
+			content: "";
+			width: 2px;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			background-color: var(--color-primary);
+			transform: scaleY(0);
+			transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s, fill 0.5s;
+		}
+	}
+
+	&__item:hover {
+		&::before {
+			transform: scaleY(1);
+			width: 100%;
+		}
+
+		.nav__icon,
+		.nav__title {
+			animation: changeNavColor 0.8s ease forwards;
+		}
+	}
+
+	&__icon {
+		height: 3rem;
+		width: 3rem;
+		fill: var(--color-primary);
+		margin-right: 3rem;
+		z-index: 1;
+	}
+
+	&__title {
+		font-size: 2.75rem;
+		font-weight: bold;
+		color: var(--color-primary);
+		z-index: 1;
+	}
+
+	&__copyright {
+		position: fixed;
+		inset: auto auto 2vh auto;
+	}
+}

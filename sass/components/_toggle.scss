@@ -1,0 +1,80 @@
+.toggle {
+	height: 8rem;
+	width: 8rem;
+	position: fixed;
+	inset: 3rem auto auto 3rem;
+	z-index: 100000;
+	background-color: var(--color-secondary);
+	border-radius: 50%;
+	@include flexCenter();
+
+	@media only screen and (max-width: $bp-small) {
+		width: 7rem;
+		height: 7rem;
+		inset: 2rem auto auto 2rem;
+	}
+
+	&__hamburger {
+		position: relative;
+		overflow: visible;
+
+		&,
+		&::before,
+		&::after {
+			width: 4rem;
+			height: 0.3rem;
+			background-color: var(--color-primary);
+			display: inline-block;
+			transition: all 0.2s;
+
+			@media only screen and (max-width: $bp-small) {
+				width: 3rem;
+			}
+		}
+
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+		}
+
+		&::before {
+			top: 1rem;
+		}
+		&::after {
+			bottom: 1rem;
+		}
+	}
+
+	&:hover &__hamburger::before {
+		transform: translateY(0.3rem);
+	}
+	&:hover &__hamburger::after {
+		transform: translateY(-0.3rem);
+	}
+
+	&.active {
+		background-color: var(--color-primary);
+	}
+
+	&.active &__hamburger,
+	&.active &__hamburger::before,
+	&.active &__hamburger::after {
+		background-color: var(--color-secondary);
+	}
+
+	&.active &__hamburger {
+		background-color: transparent;
+	}
+
+	&.active &__hamburger::before {
+		transform: rotate(135deg);
+		top: 0;
+	}
+
+	&.active &__hamburger::after {
+		transform: rotate(-135deg);
+		top: 0;
+	}
+}

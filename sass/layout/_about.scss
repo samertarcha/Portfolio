@@ -1,0 +1,88 @@
+.about {
+	grid-area: about;
+	padding: 10rem 10rem;
+	background-image: linear-gradient(102deg, var(--color-white) 0%, var(--color-white) 60%, var(--color-secondary) 60%, var(--color-secondary) 100%);
+	background-position: right;
+	@include flexCenter();
+	justify-content: flex-start;
+	flex-direction: column;
+	position: relative;
+	font-family: "Montserrat", sans-serif;
+
+	@media only screen and (max-width: $bp-large) {
+		padding: 7rem 7rem;
+	}
+
+	@media only screen and (max-width: $bp-medium) {
+		padding: 7rem 3rem;
+	}
+
+	&__card {
+		background-image: linear-gradient(
+			to right,
+			var(--color-white) 0%,
+			var(--color-white) 99%,
+			var(--color-primary) 99%,
+			var(--color-primary) 100%
+		);
+		transform: skewX(-12deg);
+		box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.4);
+		margin: 7rem 5rem 5rem 5rem;
+		@include flexCenter();
+		justify-content: space-between;
+
+		@media only screen and (max-width: $bp-small) {
+			transform: skewX(0);
+			flex-direction: column;
+			background-image: linear-gradient(
+			to bottom,
+			var(--color-white) 0%,
+			var(--color-white) 99%,
+			var(--color-primary) 99%,
+			var(--color-primary) 100%
+		);
+		margin: 5rem 3rem 3rem 3rem;
+
+		}
+	}
+
+	&__icon {
+		background-color: var(--color-primary);
+		@include flexCenter();
+		padding: 3rem;
+		height: 100%;
+
+		svg {
+			width: 15rem;
+			height: 15rem;
+			transform: skewX(12deg);
+			fill: var(--color-secondary);
+
+			@media only screen and (max-width: $bp-small) {
+				transform: skewX(0);
+				width: 5rem;
+				height: 5rem;
+			}
+		}
+
+		@media only screen and (max-width: $bp-small) {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&__text {
+		color: var(--color-primary);
+		font-size: 2rem;
+		font-weight: bold;
+		text-align: center;
+		@include flexCenter();
+		padding: 5rem;
+		transform: skewX(12deg);
+
+		@media only screen and (max-width: $bp-small) {
+			transform: skewX(0);
+			padding: 3rem;
+		}
+	}
+}

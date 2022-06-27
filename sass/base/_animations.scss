@@ -1,0 +1,18 @@
+@keyframes changeNavColor {
+	0% {
+		fill: var(--color-primary);
+        color: var(--color-primary);
+	}
+    49% {
+        fill: var(--color-primary);
+        color: var(--color-primary);
+    }
+    50% {
+        fill: var(--color-secondary);
+        color: var(--color-secondary);
+    }
+	100% {
+		fill: var(--color-secondary);
+        color: var(--color-secondary);
+	}
+}

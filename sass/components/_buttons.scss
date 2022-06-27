@@ -1,0 +1,21 @@
+.btn {
+	all: unset;
+    cursor: pointer;
+    display: inline-block;
+	font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    background-color: var(--color-secondary);
+    padding: 1.5rem 3rem;
+    border-radius: 0.5rem;
+    margin-block: 2rem;
+    box-shadow: 0 .5rem 1rem 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+
+    &:hover {
+        transform: translateY(-0.2rem) scale(1.05);
+        box-shadow: 0 .5rem 1rem 0 rgba(0, 0, 0, 0.4);
+    }
+}

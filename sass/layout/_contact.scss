@@ -1,0 +1,123 @@
+.contact {
+	grid-area: contact;
+	@include flexCenter();
+	flex-direction: column;
+	justify-content: space-around;
+	padding: 4rem 4rem;
+	background-image: linear-gradient(78deg, rgb(253, 255, 252) 0%, rgb(253, 255, 252) 60%, #ff9f1c 60%, #ff9f1c 100%);
+	overflow: visible;
+
+	@media (max-width: $bp-tiny) {
+		padding: 4rem 2rem;
+	}
+
+	&__card {
+		@include flexCenter();
+		justify-content: flex-end;
+		gap: 2rem;
+		max-width: 100rem;
+		background-image: linear-gradient(
+				78deg,
+				rgba(1, 22, 39, 0.7) 0%,
+				rgba(1, 22, 39, 0.7) 40%,
+				rgba(253, 255, 252, 0.7) 25%,
+				rgba(253, 255, 252, 0.7) 100%
+			),
+			url(../img/contact.jpg);
+		background-size: cover;
+		background-position: center;
+		border-radius: 1rem;
+		box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+		padding: 4rem 10rem;
+
+		@media only screen and (max-width: $bp-medium) {
+			padding: 4rem 4rem;
+		}
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		width: 50rem;
+
+		@media only screen and (max-width: $bp-small) {
+			width: 40rem;
+		}
+
+		@media only screen and (max-width: $bp-tiny) {
+			width: 27.5rem;
+		}
+
+		&-item {
+			position: relative;
+			overflow: visible;
+		}
+
+		&-item:first-child {
+			margin-top: 2rem;
+		}
+	}
+
+	&__input {
+		font-size: 1.5rem;
+		font-family: inherit;
+		color: inherit;
+		padding: 1rem 2rem;
+		border-radius: 0.2rem;
+		border: none;
+		width: 100%;
+		border-bottom: 0.3rem solid transparent;
+		display: block;
+		resize: none;
+		transition: all 0.3s;
+
+		&:focus {
+			outline: none;
+			box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+			border-bottom: 0.3rem solid var(--color-secondary);
+
+			&:valid {
+				border-bottom: 0.3rem solid var(--color-primary);
+			}
+		}
+
+		&::-webkit-input-placeholder {
+			color: lightgray;
+		}
+	}
+
+	&__label,
+	&__message-label {
+		font-size: 1.5rem;
+		font-family: inherit;
+		color: var(--color-secondary);
+		display: block;
+		transition: all 0.3s;
+	}
+
+	&__label {
+		transform: translateY(-6.5rem) translateX(2rem);
+	}
+
+	&__message-label {
+		transform: translateY(-8.5rem) translateX(2rem);
+	}
+
+	&__input:placeholder-shown ~ &__label,
+	&__input:placeholder-shown ~ &__message-label {
+		font-size: 1.5rem;
+		font-family: inherit;
+		color: inherit;
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	&__input:placeholder-shown ~ &__label {
+		transform: translateY(-3rem) translateX(2rem);
+	}
+
+	&__input:placeholder-shown ~ &__message-label {
+		transform: translateY(-5rem) translateX(2rem);
+	}
+}

@@ -1,0 +1,65 @@
+.header {
+	grid-area: header;
+	position: relative;
+	background-image: linear-gradient(
+			78deg,
+			rgba(1, 22, 39, 0.9) 0%,
+			rgba(1, 22, 39, 0.9) 60%,
+			rgba(253, 255, 252, 0.9) 60%,
+			rgba(253, 255, 252, 0.9) 100%
+		),
+		url("../img/header-3.jpg");
+	background-size: cover;
+	background-position: center;
+	@include flexCenter();
+	flex-direction: column;
+	font-family: "Montserrat", sans-serif;
+
+	&__content {
+		padding: 5rem;
+		@include flexCenter();
+		justify-items: center;
+		align-items: flex-end;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	&__occupation,
+	&__location {
+		font-size: 2rem;
+		font-weight: 400;
+		text-transform: uppercase;
+		color: var(--color-primary);
+		background-color: var(--color-secondary);
+		opacity: 0.9;
+		padding: 1rem 2rem;
+		margin-right: 4rem;
+	}
+
+	&__name {
+		font-size: 6rem;
+		text-transform: uppercase;
+		text-align: center;
+		font-weight: bold;
+		color: var(--color-primary);
+		background-color: var(--color-secondary);
+		padding: 1rem 3rem;
+		opacity: 0.8;
+	}
+
+	&__more {
+		all: unset;
+		font-size: 2rem;
+		text-transform: uppercase;
+		font-weight: bold;
+		color: var(--color-white);
+		margin-top: 5rem;
+		@include flexCenter();
+		flex-direction: column;
+		cursor: pointer;
+
+		p {
+			margin-bottom: 1rem;
+		}
+	}
+}

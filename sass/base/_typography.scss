@@ -1,0 +1,19 @@
+.heading-secondary {
+	margin: 0 auto 2rem auto;
+	text-transform: uppercase;
+	border-bottom: 2px solid var(--color-primary);
+	font-size: 3rem;
+	padding-bottom: 0.5rem;
+	text-align: center;
+	width: fit-content;
+}
+
+.heading-tertiary {
+	margin: 0 auto 2rem auto;
+	text-transform: uppercase;
+	border-bottom: 2px solid var(--color-primary);
+	font-size: 2rem;
+	padding-bottom: 0.5rem;
+	text-align: center;
+	width: fit-content;
+}
